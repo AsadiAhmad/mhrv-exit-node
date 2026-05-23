@@ -36,6 +36,8 @@
 // of an offline exit node is that ChatGPT/Claude/Grok stop working;
 // other sites are unaffected.
 
+console.log("METHOD:", req.method);
+
 const PSK = "6547b3ff4b1c102cd3cc5a423b4e482b26f164d4871c24706977477fdfbd03bf";
 
 // Headers the client may send that must NOT be forwarded to the
@@ -176,3 +178,5 @@ export async function handleExitNodeRequest(req: Request): Promise<Response> {
 export default {
   fetch: handleExitNodeRequest,
 };
+
+console.log("METHOD:", req.method);
